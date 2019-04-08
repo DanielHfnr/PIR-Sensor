@@ -1,0 +1,11 @@
+[Unit]
+Description=Display timeout PIR daemon
+Wants=local-fs.target
+ 
+[Service]
+ExecStart=/usr/local/sbin/pir
+Restart=always
+KillSignal=SIGINT
+ 
+[Install]
+WantedBy=multi-user.target
